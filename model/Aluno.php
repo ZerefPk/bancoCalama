@@ -89,7 +89,7 @@ class Aluno {
         try {
 
         } catch (Exception $e) {
-
+            return false;
         }
 
     }
