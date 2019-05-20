@@ -144,7 +144,7 @@ class Aluno {
             try {
                 $sql = "UPDATE aluno SET foto =  :foto";
                 $stmt = ConexaoFactory::getConexao()->prepare($sql);
-                $stmt->bindValue(':foto', $foto)
+                $stmt->bindValue(':foto', $foto);
 
                 $destinoImage = '../public/img/aluno/'.$nomeImg;
                 move_uploaded_file($foto, $destinoImage);

@@ -35,31 +35,31 @@ class Empresa {
   }
 
   public function trocasenha($id, $senhaold, $senhanew) {
-    $sql = "UPDATE empresa SET senha = :senha WHERE id = :id";
-    $valide = "SELECT (id) 'valide' FROM empresa WHERE id = :id AND senha = :senha";
-    try {
-        $stmt = ConexaoFactory::getConexao()->prepare($valide);
-        $stmt->bindValue(":id", $id);
-        $stmt->bindValue(":senha", $senhaold);
-        $stmt->execute();
-    } catch (\Exception $e) {
-      throw new Exception("Erro ao verificar", $e);
-    return;
-    }
+        $sql = "UPDATE empresa SET senha = :senha WHERE id = :id";
+        $valide = "SELECT (id) 'valide' FROM empresa WHERE id = :id AND senha = :senha";
+        try {
+            $stmt = ConexaoFactory::getConexao()->prepare($valide);
+            $stmt->bindValue(":id", $id);
+            $stmt->bindValue(":senha", $senhaold);
+            $stmt->execute();
+        } catch (\Exception $e) {
+          throw new Exception("Erro ao verificar", $e);
+        return;
+        }
 
-    if($stmt->rowCount()>0) {
-      try {
-        $stmt = ConexaoFactory::getConexao()->prepare($sql);
-        $stmt->bindValue(":id", $id);
-        $stmt->bindValue(":senha", $senhanew);
-        $result = $stmt->execute();
-        return $result;
-      } catch (Exception $e) {
-        throw new Exception("Não foi possivel alterar a senha", $e);
-      return;
-      }
-    } else {
-      return false;
-    }
+        if($stmt->rowCount()>0) {
+          try {
+            $stmt = ConexaoFactory::getConexao()->prepare($sql);
+            $stmt->bindValue(":id", $id);
+            $stmt->bindValue(":senha", $senhanew);
+            $result = $stmt->execute();
+            return $result;
+          } catch (Exception $e) {
+            throw new Exception("Não foi possivel alterar a senha", $e);
+          return;
+          }
+        } else {
+          return false;
+        }
   }
 }
