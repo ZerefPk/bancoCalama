@@ -42,7 +42,7 @@ class Candidato
             $stmt->bindValue(':idAluno',$idAluno);
             $stmt->bindValue(':idVaga', $idVaga);
             $stmt->execute();
-            $stmt = $stmt->rowCount():
+            $stmt = $stmt->rowCount();
             return $stmt;
 
         } catch (\Exception $e) {
@@ -50,6 +50,65 @@ class Candidato
 
         }
     }
+    public function listarCandidatos($idVaga, $pagina, $qtd)
+    {
 
+
+        $inicio = ($pagina * $qtd) - $qtd;
+
+        $total = "SELECT COUNT(ID_candidato) candidato FROM candidato WHERE  vaga_id_vaga = :idVaga";
+
+        $sql= "SELECT
+                     C.id_candidato,A.idAluno, A.nome, A.curso,V.cargo
+                      FROM
+                          candidato AS C
+                              INNER JOIN
+                          aluno AS A ON C.aluno_id_aluno = A.idAluno
+                              INNER JOIN
+                          vagas AS V ON C.vaga_id_vaga = V.ID_vaga
+                              INNER JOIN
+                          empresa AS E ON V.ID_empresa = E.Id
+                      WHERE
+                         C.vaga_id_vaga = :idVaga
+                      LIMIT $inicio, $qtd;";
+
+
+        try {
+            $total = ConexaoFactory::getConexao()->prepare($total);
+            $total->bindValue(':idVaga', $idVaga);
+            $total->execute();
+            $total = $total->fetch(PDO::FETCH_ASSOC);
+            $total = $total['candidato'];
+
+            $stmt = ConexaoFactory::getConexao()->prepare($sql);
+
+            $stmt->bindValue(':idVaga', $idVaga);
+
+            $stmt->execute();
+
+            return [$stmt, $total];
+
+        } catch (\Exception $e) {
+            throw new \Exception("Error Processing Request", $e);
+
+        }
+
+
+    }
+    public function deletarCanditato($id) {
+
+        $sql = "DELETE FROM candidato WHERE id_candidato = :id";
+            try {
+            $stmt = ConexaoFactory::getConexao()->prepare($sql);
+            $stmt->bindValue(':id', $id);
+            $stmt->execute();
+            return $stmt->rowCount()>0;
+        } catch(\Exception $e) {
+            throw new Exception("erro ao deletear", $e);
+            return;
+        }
+
+
+    }
 
 }

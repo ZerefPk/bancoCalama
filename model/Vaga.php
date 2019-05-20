@@ -142,31 +142,22 @@ class Vaga
         }
 
     }
-    public function deletarVaga($id) {
-      $valide = "SELECT V.ID_vaga FROM vagas V INNER JOIN empresa E WHERE V.ID_empresa = E.id AND V.ID_vaga = $id ";
-      $sql = "DELETE FROM vagas WHERE ID_vaga = :id";
-      try {
-        $stmt = ConexaoFactory::getConexao()->prepare($valide);
-        $stmt->bindValue(':id', $id);
-        $result = $stmt->execute();
-        return $result;
-      } catch(\Exception $e) {
-        throw new Exception("Aparentemente esta conta de empresa não é a dona desta vaga.");
-        return;
-      }
+    public function deletarVaga($idVaga, $idEmp) {
 
-      if($stmt->rowCount()>0) {
-        try {
-          $stmt = ConexaoFactory::getConexao()->prepare($sql);
-          $stmt->bindValue(':id', $id);
-          $result = $stmt->execute();
-          return $result;
+        $sql = "DELETE FROM vagas WHERE ID_vaga = :id AND ID_empresa = :idemp";
+            try {
+            $stmt = ConexaoFactory::getConexao()->prepare($sql);
+            $stmt->bindValue(':id', $id);
+            $stmt->bindValue(':idemp', $idEmp);
+            $stmt->execute();
+            return $stmt->rowCount()>0;
         } catch(\Exception $e) {
-          throw new Exception('Não foi possivel deletar.', $e);
-          return;
+            throw new Exception("erro ao deletear", $e);
+            return;
         }
-      }
+
 
     }
+
 
 }
