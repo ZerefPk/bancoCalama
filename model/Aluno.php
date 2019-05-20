@@ -51,7 +51,7 @@ class Aluno {
                     $execult = $stmt->execute();
                     if ($execult) {
                         $destinoImage = '../public/img/aluno/'.$nomeImg;
-                        move_uploaded_file($imgProduto, $destinoImage);
+                        move_uploaded_file($foto, $destinoImage);
                         return true;
                     }
 
@@ -108,7 +108,7 @@ class Aluno {
     }
     public function alterarDados($id,$nome, $dataNascimento, $telefone,
             $email,$curso, $ano, $objetivo, $expertiencia,$extencao,$nomeImg ,$foto,
-            $disponibilidade, $escolaridade, $stCivil, $bairro, $idioma){
+            $disponibilidade, $escolaridade, $stCivil, $bairro, $idioma, $altImg){
         // code...
         $sql = "UPDATE aluno SET nome = :nome, data_de_nascimento = :dn, telefone = :tl, email = :email,
         curso = :curso,
@@ -134,14 +134,30 @@ class Aluno {
             $stmt->bindValue(':idioma', $idioma);
 
             $execult = $stmt->execute();
-            if ($execult) {
-                $destinoImage = '../public/img/aluno/'.$nomeImg;
-                move_uploaded_file($imgProduto, $destinoImage);
-                return true;
-            }
+
 
         } catch (Exception $ex) {
             return false;
+        }
+        if ($altImg) {
+            // code..
+            try {
+                $sql = "UPDATE aluno SET foto =  :foto";
+                $stmt = ConexaoFactory::getConexao()->prepare($sql);
+                $stmt->bindValue(':foto', $foto)
+
+                $destinoImage = '../public/img/aluno/'.$nomeImg;
+                move_uploaded_file($foto, $destinoImage);
+                $stmt->execute();
+                return true;
+
+            } catch (\Exception $e) {
+                throw new \Exception("Error Processing Request", $e);
+
+            }
+
+
+
         }
 
     }
