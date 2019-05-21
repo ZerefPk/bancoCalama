@@ -1,0 +1,57 @@
+
+.mdl-card{
+	align-self:center;
+	margin-top:5%;
+	margin-bottom:0%;
+	width:100%;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.mdl-card-testo{
+	margin-top: 2%;
+	width:60%;
+	text-align:left;
+	margin-left: 25%;
+	position: absolute;
+
+}
+.mdl-mini-footer .mdl-logo {
+	line-height: 0px;
+
+}
+.acme-card {
+	margin-left: 5%;
+	height: 150px;
+	width: 200px;
+	margin-top:5%;
+	background: url('https://tfirdaus.github.io/mdl/images/laptop.jpg') center / cover;
+}
+.left {
+	float: left;
+  	padding-right: 3em;
+  	padding-top: 0.3em;
+  	padding-bottom: 0.3em;
+}
+@media screen and (max-width: 500px){
+	.mdl-card{
+		width: 100%;
+		margin-top: 10%;
+	}
+	.acme-card{
+		width:70%;
+		height: auto;
+	}
+	.mdl-card-testo{
+		width:70%;
+		margin-top: 10%;
+		position: relative;
+		margin-left:5%;
+	}
+}
+@media screen and (max-width: 1920px){
+	.mdl-layout__header-row {
+		height: 56px;
+		padding: 0 20px 0 20px;
+	}
+}
