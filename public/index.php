@@ -2,7 +2,7 @@
 <html lang="pt-BR ">
 <head>
   <meta charset="utf-8">
-  <link rel="shortcut icon" type="imagem/x-icon" href="icone.png"/>
+  <link rel="shortcut icon" type="imagem/x-icon" href="img/icone.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>e-Curriculum || Porto Velho Calama</title>
   <!--arquivos online-->
