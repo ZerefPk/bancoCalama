@@ -29,6 +29,12 @@ $escolaridade = "Ensino Fundamental completo";
 
 //façam uma veficacao pra cada uma das variaveis
 
+if(isset($_POST['nome'])&& isset($_POST['sexo'])&& isset($_POST['data'])&& isset($_POST['bairro'])&& isset($_POST['idioma'])&& isset($_POST['cpf'])
+isset($_POST['foto'])&& isset($_POST['senha'])&& isset($_POST['telefone'])&& isset($_POST['email'])&& isset($_POST['curso'])&&
+isset($_POST['ano'])&& isset($_POST['$experiencia'])&& isset($_POST['projetos_de_extensao'])&& isset($_POST['objetivo_profissional'])&&
+isset($_POST['turno'])&& isset($_POST['estCivil']))
+{
+
 // trata nome da imagem
 $extensao = pathinfo ( $nomeImg, PATHINFO_EXTENSION );
 if(strstr ( '.jpg;.jpeg;.png', $extensao )){
@@ -48,6 +54,7 @@ $aluno = $aluno->cadastraAluno($nome, $sexo, $dataNascimento, $cpf, $telefone,
 if ($aluno) {
     //redicinar se o cadastro foi efetudo com sucesso
     echo "cadastro";
+}
 }
 else {
     //redicar para cadastro
