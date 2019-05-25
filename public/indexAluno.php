@@ -1,59 +1,271 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR ">
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Para Alunos || Kanidea</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="imagem/x-icon" href="icone.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>e-Curriculum || Porto Velho Calama</title>
+  <!--arquivos online-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-light_green.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
 </head>
+<style>
+
+
+nav.mdl-navigation .mdl-badge[data-badge]:after{
+  top: 5px;
+  right: -8px;
+}
+
+@media screen and (max-width: 500px){
+  .esconde-celular{
+    display: none;
+
+  }
+  nav.mdl-navigation .mdl-badge[data-badge]:after{
+    right: 5px;
+  }
+}
+
+@media screen and (min-width: 510px){
+  .mostra-celular{
+    display: none;
+  }
+}
+.demo-layout .mdl-layout__header .mdl-layout__drawer-button {
+  color: rgba(0, 0, 0, 0.54);
+  border: none;
+}
+
+.mdl-mini-footer .mdl-logo {
+  line-height: 0px;
+}
+@media screen and (max-width: 1920px){
+  .mdl-layout__header-row {
+    height: 56px;
+    padding: 0 20px 0 20px;
+  }
+}
+
+/*@MEDIA COM BOOTSTRAP*/
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .card-left-nick {
+    width: auto;
+    height: auto;
+    padding-right-left: 0.1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.3em;
+  }
+
+  /*.espacamento_entre_cabecalho_e_botoes {
+    padding: 1em;
+    }*/
+
+    .card-left-nick {
+      padding-left: 5%;
+      padding-right: 5%;
+      width: 100%;
+    }
+  }
+
+  /* Medium devices (tablets, 768px and up)*/
+  @media (max-width: 1024px) {
+  /*.espacamento_entre_cabecalho_e_botoes {
+    padding: 5em;
+    }*/
+
+  }
+
+  /* Large devices (desktops, 992px and up)*/
+  @media (min-width: 992px) {
+    .card-left-nick {
+      float: left;
+      padding-right-left: 0.1em;
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+    }
+
+  /*.espacamento_entre_cabecalho_e_botoes {
+    padding: 5em;
+    }*/
+  }
+
+  /* Extra large devices (large desktops, 1200px and up)*/
+  @media (min-width: 1200px) {
+    .card-left-nick {
+      float: left;
+      padding-right-left: 0.1em;
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+    }
+  }
+  .mdl-card{
+    align-self: center;
+    margin-top: 100px;
+  }
+  .mdl-mini-footer .mdl-logo {
+    line-height: 0px;
+
+  }
+  @media screen and (max-width: 500px){
+    .mdl-card{
+      width: 70%;
+      margin-top: 10%;
+    }
+    .esconde-celular{
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 510px){
+    .mostra-celular{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1920px){
+    .mdl-layout__header-row {
+      height: 56px;
+      padding: 0 20px 0 20px;
+    }
+    .card-imgdiv {
+      position: relative;
+      width: 80%;
+      height: 80%;
+      padding-top: 1%;
+      overflow: hidden;
+    }
+    .card-body{
+      padding-right:6%;
+      padding-left:6%;
+    }
+    .card {
+      display:inline-block;
+      margin-right:18px;
+    }
+
+
+    /*PARA iPads*/
+    @media(max-width: 768px and max-height: 1024px or max-width: 1024px and max-height: 768px){
+      .espacamento_entre_cabecalho_e_botoes {
+        padding-top: 10%;
+      }
+    }
+
+    /*PARA iPads Pro*/
+    @media(max-width: 1024px and max-height: 1366px or max-width: 1366px and max-height: 1024px){
+      .espacamento_entre_cabecalho_e_botoes {
+        padding-top: 10%;
+      }
+    }
+    /*FIM @MEDIA COM BOOTSTRAP*/
+    .mdl-button--primary.mdl-button--primary.mdl-button--raised, .mdl-button--primary.mdl-button--primary.mdl-button--fab {
+      color: rgb(255,255,255);
+      background-color: rgb(63,81,181);
+      border-radius: 2px;
+      alignment-baseline: : center;
+      font color: #000;
+      margin-left: auto;
+      margin-right: auto;
+      height: 200px;
+      min-width: 250px;
+      padding: 6 68px;
+      font-weight: 500;
+    }
+
+    .center-align{
+      text-align: center;
+    }
+
+    .botao {
+      width: 100%;
+      height: 5em;
+      padding-top: 2em;
+      padding-left: 1em;
+      font-size: 2em;
+    }
+
+    .card-left-nick {
+      float: left;
+      padding-right-left: 0.1em;
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+    }
+
+    .btn-success {
+      color: #fff;
+      padding: 15%;
+    }
+
+    /*somente faz interferenia no botão*/
+    .card-body-nick {
+    }
+
+/*.botao {
+  width: 100%;
+  font-size: 2em;
+  }*/
+
+  .espacamento_entre_cabecalho_e_botoes {
+    padding-top: 5%;
+  }
+  @media (min-width: 300px){
+    .vituriano{
+      height: 11rem;
+      width: 21rem;
+    }
+  }
+  @media (min-width: 1300px){
+    .vituriano{
+      height: 18rem;
+      width: 38rem;
+    }
+  }
+</style>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Kanidea</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+ <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+   <div class="mdl-layout__header-row">
+     <!--back arrow-->
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Início <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Sobre a plataforma</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Retornar para a página anterior</a>
-				</li>
-			</div>
-		</nav>
 
-		<br><br>
 
-		<center>
-			<div class="btn-externo-aluno-nick">
-				<button type="button" class="btn-aluno-nick btn-success font-btn-nick">Cadastrar Aluno</button>
-			</div>
-			<div class="padding"></div>
-			<br><br>
-			<div class="btn-externo-aluno-nick">
-				<button type="button" class="btn-aluno-nick btn-success font-btn-nick">Atualizar Dados</button>
-			</div>
-			<div class="padding"></div>
-			<br><br>
-			<div class="btn-externo-aluno-nick">
-				<button type="button" class="btn-aluno-nick btn-success font-btn-nick">Vagas Disponíveis</button>
-			</div>
-			<div class="padding"></div>
-			<br><br>
-			<div class="btn-externo-aluno-nick">
-				<button type="button" class="btn-aluno-nick btn-success font-btn-nick">Meu currículo</button>
-			</div>
-			<div class="padding"></div>
-			<br><br>
-		</center>
+     <i style="color: white;" class="material-icons">
+      supervised_user_circle
+    </i><a class="mdl-layout-title mdl-layout-title" style="color: white;" href="calamadesenvolvedores.php">Sobre</a>
 
-	</body>
-	</html>
+    <div class="mdl-layout-spacer"></div>
+    <span class="mdl-layout-title" style="color: white;">Para Estudantes</span>
+  </div>
+</header>
+<br>
+
+<center>
+  <a href="validarAluno.php">
+    <div class="card" style=" margin-top: 1.8%;">
+      <button type="button"  class="vituriano btn btn-success botao">Cadastrar Aluno</button>
+    </div>
+  </a>
+
+  <a href="loginAluno.php">
+    <div class="card" style=" margin-top: 1.8%;">
+      <button type="button" class="vituriano btn btn-success botao">Aluno Cadastrado</button>
+    </div>
+  </a>
+
+ </center>
+
+<br><br><br><br>
+
+<center>
+  <div style="padding: 7%;">
+    <h6>Desenvolvido  por Felipe Raymison, Giovanna Nunes, Maria Luiza Botelho, Tony Padilha e 4º ano de Informática de 2018</h6>
+    <h6>SAC: curriculoscalamaifro@gmail.com</h6>
+  </div>
+</center>
+
+</body>
+</html>

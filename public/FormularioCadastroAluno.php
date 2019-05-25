@@ -141,7 +141,7 @@ $nome = $_SESSION['dados'][1];
     <div class="mdl-layout__content">
         <main class="mdl-card mdl-shadow--6dp">
         <!--redireciona para cadastro aluno contoller-->
-         <form action="../contoller/CadastroAlunoController.php" method="post" enctype="multipart/form-data">
+         <form action="../controller/CadastraAlunoController.php" method="post" enctype="multipart/form-data">
             <div class="esquerda">
                 <!--Textfield Nome -->
                 <br>

@@ -244,7 +244,7 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 <br>
 
 <center>
-  <a href="estudantes.php">
+  <a href="indexAluno.php">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button"  class="vituriano btn btn-success botao">Para Estudantes</button>
     </div>

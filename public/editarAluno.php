@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once '../controller/DadosAlunoController.php';
 ?>
 <!DOCTYPE html>
 <head>
@@ -122,33 +123,8 @@ label.input-custom-file input[type=file] {
     $("#telefone").mask("(99) 99999-9999");
   });
 </script>
-<?php
-
-include('conexao.php');
-$id = $_SESSION['aluno'];
 
 
-$select = mysqli_query($conn, "SELECT * FROM aluno WHERE idAluno = '$id'");
-
-
-    while ($aluno = mysqli_fetch_assoc($select)) {
-        $id = $aluno['idAluno'];
-        $nome = $aluno['nome'];
-        $data = $aluno['data_de_nascimento'];
-        $cpf = $aluno['cpf'];
-        $tel = $aluno['telefone'];
-        $email = $aluno['email'];
-        $senha = $aluno['senha'];
-        $objetivo = $aluno['objetivo_prof'];
-        $experiencia = $aluno['experiencia_prof'];
-        $extensao = $aluno['extensao'];
-        $foto = $aluno['foto'];
-        $bairro = $aluno['bairro'];
-        $idioma = $aluno['idioma'];
-        $escolaridade = $aluno['escolaridade'];
-    }
-
-echo '
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"><!--Cabeçalho-->
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -172,7 +148,7 @@ echo '
                     <div>
                         <Label class="">
           <input type="file" required name="arquivo" id="arquivo" onchange="previewImagem()" accept="image/x-png,image/gif,image/jpeg"> </br> </br>
-          <img src="https://www.gazetadopovo.com.br/blogs/sobretudo/wp-content/themes/padrao/imagens/perfil-blog.png" alt="ExemploImagem" style="width:150px; height:150px;">
+          <img src="<?php echo "img/aluno/".$aluno['foto']; ?>" alt="ExemploImagem" style="width:150px; height:150px;">
                     </label>
                         <br>
                     </div>
@@ -181,22 +157,10 @@ echo '
                 </br></br>
                     <label><b>Nome:</b></label>
                 <div class="mdl-textfield mdl-js-textfield">
-                 <input class="mdl-textfield__input" type="text" id="sample" name="nome"  value="' . $nome .'">
+                 <input class="mdl-textfield__input" type="text" id="sample" name="nome"  value="<?php echo $aluno['nome']; ?>">
                     <label class="mdl-textfield__label" for="sample"></label>
                 </div>
-                <div><!--Radio buttons-->
-                    <label><b>Sexo (CAMPO OBRIGATÓRIO): </b></br></label>
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opção-1">
-                        <input type="radio" required id="opção-1" class="mdl-radio__button" name="sexo" value="Masculino">
 
-                        <span class="mdl-radio__label">Masculino</span>
-                    </label>
-                    </br>
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opção-2">
-                        <input type="radio" required id="opção-2" class="mdl-radio__button" name="sexo" value="Feminino">
-                        <span class="mdl-radio__label">Feminino</span>
-                    </label>
-                </div>
                 </br></br>
                 <div>
                     <label><b>Estado Civil (CAMPO OBRIGATÓRIO)</b></label>
@@ -231,32 +195,16 @@ echo '
                     <br>
                     <label><b>Data de Nascimento (CAMPO OBRIGATÓRIO):</b></label>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="date" id="data" name="data" value="'.$data.'" ">
+                        <input class="mdl-textfield__input" type="date" id="data" name="data" value="<?php echo $aluno['data_de_nascimento']; ?>" >
                     </div>
                 </div>
-                  <div><!--CPF-->
-                    <br>
-                    <label><b>CPF:</b></label>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" maxlength="14" OnKeyPress="formatar("###.###.###-##", this)" id="sample3" name="cpf" value="' . $cpf .'" readonly="readonly" required>
-                        <label class="mdl-textfield__label" for="sample3">CPF</label>
-                    </div>
-                    <br>
-                </div>
-                <div><!--telefone-->
-                    <br>
-                    <label><b>Senha (para login):</b></label>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password" id="sample3" name="senha"  value="' . $senha . '">
-                        <label class="mdl-textfield__label" for="sample3" ></label>
-                    </div>
-                    <br>
-                </div>
+
+                
                 <div><!--Email-->
                     <br>
                     <label><b>E-mail:</b></label>
                     <div class="mdl-textfield mdl-js-textfield"><!--Não sei se do firefox ou meu pc mas o calendario pra selecionar datas ta bugado, No chrome e de boa-->
-                        <input class="mdl-textfield__input" type="email" id="sample2" name="email" value="' . $email .'">
+                        <input class="mdl-textfield__input" type="email" id="sample2" name="email" value="<?php echo $aluno['email']; ?>">
                         <label class="mdl-textfield__label" for="sample2"></label>
                     </div>
                 </div>
@@ -264,7 +212,7 @@ echo '
                     <br>
                     <label><b>Bairro em que reside:</b></label>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" id="sample3" name="bairro" value="' . $bairro .'">
+                        <input class="mdl-textfield__input" type="text" id="sample3" name="bairro" value="<?php echo $aluno['bairro']; ?>">
                         <label class="mdl-textfield__label" for="sample3"></label>
                     </div>
                     <br>
@@ -317,7 +265,7 @@ echo '
                     <br>
                     <label><b>Telefone:</b></label>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input name="telefone" type="text" id="telefone" inputmode="numeric" placeholder="(--)XXXXX-XXXX" class="mdl-textfield__input" value="' . $tel .'">
+                        <input name="telefone" type="text" id="telefone" inputmode="numeric" placeholder="(--)XXXXX-XXXX" class="mdl-textfield__input" value="<?php echo $aluno['telefone']; ?>'">
                         <label class="mdl-textfield__label" for="sample3"></label>
                     </div>
                     <br>
@@ -394,7 +342,7 @@ echo '
                     <label><b>Objetivo Profissional</b></label>
                     <br>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" name="objetivo_profissional" style="border-width: 2px;border-style: solid;">'.$objetivo.'</textarea>
+                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" name="objetivo_profissional" style="border-width: 2px;border-style: solid;"><?php echo $aluno['objetivo_prof']; ?></textarea>
                         <label class="mdl-textfield__label" for="sample3"></label>
 
                     </div>
@@ -404,7 +352,7 @@ echo '
                     <label><b>Experiência Profissional</b></label>
                     <br>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" name="experiencia" style="border-width: 2px;border-style: solid;">' . $experiencia . '</textarea>
+                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" name="experiencia" style="border-width: 2px;border-style: solid;"><?php echo $aluno['experiencia_prof']; ?></textarea>
                         <label class="mdl-textfield__label" for="sample3"></label>
                     </div>
                 </div>
@@ -413,7 +361,7 @@ echo '
                     <label><b>Pesquisa, Ensino e Extensão (nome e ano de atuação)</b></label>
                     <br>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" name="projetos_de_extensao" style="border-width: 2px;border-style: solid;">'.$extensao.'</textarea>
+                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" name="projetos_de_extensao" style="border-width: 2px;border-style: solid;"><?php echo $aluno['extensao']; ?></textarea>
                         <label class="mdl-textfield__label" for="sample3"></label>
                     </div>
                 </div>
@@ -450,6 +398,6 @@ echo '
 
     </main>
 </div>
-' ;?>
+
 </body>
 </html>

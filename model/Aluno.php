@@ -7,6 +7,7 @@
  */
 
 include_once "ConexaoFactory.php";
+include_once "CpfAluno.php";
 /**
  * Description of Aluno
  *
@@ -16,52 +17,47 @@ class Aluno {
     //put your code here
 
     public function cadastraAluno($nome, $sexo, $dataNascimento, $cpf, $telefone,
-            $email,$curso, $ano, $senha, $objetivo, $expertiencia,$extencao,$nomeImg ,$foto,
+            $email,$curso, $ano, $senha, $objetivo, $experiencia,$extencao,$nomeImg ,$foto,
             $disponibilidade, $escolaridade, $stCivil, $bairro, $idioma){
 
-        $valide = CpfAluno::validarCpf($cpf);
-        if (valide=='1'){
 
-            $valide = $this->verificarAluno($cpf);
-            if ($valide=='0'){
-                $sql = "INSERT INTO aluno VALUES(DEFAULT, :nome, :sexo, :dn, :cpf, :tl, :email,
-                :curso, :ano, :senha, :obj, :experiencia, :extencao, :foto, :disp, :escolaridade,
-                :stCivil, :bairro,  :idioma);";
+            $sql = "INSERT INTO aluno VALUES(DEFAULT, :nome, :sexo, :dn, :cpf, :tl, :email,
+            :curso, :ano, :senha, :obj, :experiencia, :extencao, :foto, :disp, :escolaridade,
+            :stCivil, :bairro,  :idioma);";
 
-                try {
-                    $stmt = ConexaoFactory::getConexao()->prepare($sql);
-                    $stmt->bindValue(':nome', $nome);
-                    $stmt->bindValue(':sexo', $sexo);
-                    $stmt->bindValue(':dn', $dataNascimento);
-                    $stmt->bindValue(':cpf', $cpf);
-                    $stmt->bindValue(':tl', $telefone);
-                    $stmt->bindValue(':email', $email);
-                    $stmt->bindValue(':curso', $curso);
-                    $stmt->bindValue(':ano', $ano);
-                    $stmt->bindValue(':senha', md5($senha));
-                    $stmt->bindValue(':obj', $objetivo);
-                    $stmt->bindValue(':extencao', $extencao);
-                    $stmt->bindValue(':foto', $nomeImg);
-                    $stmt->bindValue(':disp', $disponibilidade);
-                    $stmt->bindValue(':escolaridade', $escolaridade);
-                    $stmt->bindValue(':stCivil', $stCivil);
-                    $stmt->bindValue(':bairro', $bairro);
-                    $stmt->bindValue(':idioma', $idioma);
+            try {
+                $stmt = ConexaoFactory::getConexao()->prepare($sql);
+                $stmt->bindValue(':nome', $nome);
+                $stmt->bindValue(':sexo', $sexo);
+                $stmt->bindValue(':dn', $dataNascimento);
+                $stmt->bindValue(':cpf', $cpf);
+                $stmt->bindValue(':tl', $telefone);
+                $stmt->bindValue(':email', $email);
+                $stmt->bindValue(':curso', $curso);
+                $stmt->bindValue(':ano', $ano);
+                $stmt->bindValue(':senha', md5($senha));
+                $stmt->bindValue(':obj', $objetivo);
+                $stmt->bindValue(':experiencia',  $experiencia);
+                $stmt->bindValue(':extencao', $extencao);
+                $stmt->bindValue(':foto', $nomeImg);
+                $stmt->bindValue(':disp', $disponibilidade);
+                $stmt->bindValue(':escolaridade', $escolaridade);
+                $stmt->bindValue(':stCivil', $stCivil);
+                $stmt->bindValue(':bairro', $bairro);
+                $stmt->bindValue(':idioma', $idioma);
 
-                    $execult = $stmt->execute();
-                    if ($execult) {
-                        $destinoImage = '../public/img/aluno/'.$nomeImg;
-                        move_uploaded_file($foto, $destinoImage);
-                        return true;
-                    }
-
-                } catch (Exception $ex) {
-                    return false;
+                $execult = $stmt->execute();
+                if ($execult) {
+                    $destinoImage = '../public/img/aluno/'.$nomeImg;
+                    move_uploaded_file($foto, $destinoImage);
+                    return true;
                 }
 
+            } catch (Exception $ex) {
+                return false;
             }
 
-        }
+
     }
     public function alterarSenha($id,$senhaOld, $senhaNew)
     {
@@ -226,11 +222,12 @@ class Aluno {
             if ($stmt->rowCount() > 0) {
                 $stmt = $stmt->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['id'] = $stmt['idAluno'];
+                return true;
 
             }
             else {
                 $_SESSION['LoginErro'] = "Usuário ou senha invalida";
-                return;
+                return false;
             }
         } catch (Exception $e) {
             return false;
