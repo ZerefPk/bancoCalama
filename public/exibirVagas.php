@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php session_start(); ?>
 <html lang="pt-BR ">
 <head>
   <meta charset="utf-8">
@@ -124,9 +124,19 @@ echo "</pre>";
 */
 if (isset($_SESSION['msn'])) {
     // code...
-    echo "<script>alert('Curriculo enviado com sucesso!');</script>";
-    unset($_SESSION['msn']);
+    if ($_SESSION['msn']) {
+        // code...
+        echo "<script>alert('Curriculo enviado com sucesso!');</script>";
+        unset($_SESSION['msn']);
+    }
+    else {
+        // code...
+        echo "<script>alert('Você já envio curriculo para essa vaga!');</script>";
+        unset($_SESSION['msn']);
+    }
+
 }
+
 while ($dados = $vaga[0]->fetch(PDO::FETCH_ASSOC)) {
   // code...
   echo '
