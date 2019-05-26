@@ -244,19 +244,19 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 <br>
 
 <center>
-   <a href="EditarAluno.php">
+   <a href="EditarAluno">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button" class="vituriano btn btn-success botao">Editar Perfil</button>
     </div>
   </a>
 
-  <a href="exibirVagas.php">
+  <a href="exibirVagas">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button" class="vituriano btn btn-success botao">Vagas</button>
     </div>
   </a>
 
-  <a href="exibirCurriculo.php" >
+  <a href="exibirCurriculo" >
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button"  class="vituriano btn btn-success botao">Meu Currículo</button>
     </div>

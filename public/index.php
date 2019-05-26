@@ -235,7 +235,7 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 
      <i style="color: white;" class="material-icons">
       supervised_user_circle
-    </i><a class="mdl-layout-title mdl-layout-title" style="color: white;" href="calamadesenvolvedores.php">Sobre</a>
+    </i><a class="mdl-layout-title mdl-layout-title" style="color: white;" href="calamadesenvolvedores">Sobre</a>
 
     <div class="mdl-layout-spacer"></div>
     <span class="mdl-layout-title" style="color: white;">Menu Principal</span>
@@ -244,14 +244,14 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 <br>
 
 <center>
-  <a href="indexAluno.php">
+  <a href="indexAluno">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button"  class="vituriano btn btn-success botao">Para Estudantes</button>
     </div>
   </a>
 
 
-  <a href="indexEmpresa.php">
+  <a href="indexEmpresa">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button" class="vituriano btn btn-success botao">Para Empresas</button>
     </div>

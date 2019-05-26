@@ -202,7 +202,7 @@ if ($conn->query($insert)) {
 					<p><b>Disponibilidade:</b> %s</p>
 					</br>
 
-					<a href='imprimirCurriculo.php'><button class='mdl-button mdl-js-button mdl-button--raised mdl-button--colored' type='button' style='color:white; margin: 7px;' name='imprimir' value='imprimir'><img src='https://image.flaticon.com/icons/png/512/61/61764.png' border='0' ; width='36' height='36'</button></a>
+					<a href='imprimirCurriculo'><button class='mdl-button mdl-js-button mdl-button--raised mdl-button--colored' type='button' style='color:white; margin: 7px;' name='imprimir' value='imprimir'><img src='https://image.flaticon.com/icons/png/512/61/61764.png' border='0' ; width='36' height='36'</button></a>
 </a></br>
 	<button class='mdl-button mdl-js-button mdl-button--raised mdl-button--colored' type='input' margin-right:'2px' style='color:white;'>Sair</button></center>
 

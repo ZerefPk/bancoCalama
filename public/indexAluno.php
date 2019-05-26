@@ -244,13 +244,13 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 <br>
 
 <center>
-  <a href="validarAluno.php">
+  <a href="validarAluno">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button"  class="vituriano btn btn-success botao">Cadastrar Aluno</button>
     </div>
   </a>
 
-  <a href="loginAluno.php">
+  <a href="loginAluno">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button" class="vituriano btn btn-success botao">Aluno Cadastrado</button>
     </div>

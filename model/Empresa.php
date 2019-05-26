@@ -24,7 +24,7 @@ class Empresa {
         $stmt->bindValue(':tl', $telefone);
         $stmt->bindValue(':cnpj', $cnpj);
         $stmt->bindValue(':rz', $razao);
-        $stmt->bindValue(':senha', crypt($senha));
+        $stmt->bindValue(':senha', md5($senha));
         $stmt->bindValue(':celular', $celular);
 
         $result = $stmt->execute();

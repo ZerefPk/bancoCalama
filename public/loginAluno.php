@@ -120,7 +120,7 @@ session_start();
 
                   <div class="mdl-grid" style="text-align: center">
                     <div class="mdl-cell mdl-cell--12-col">
-                      <a href="RecuperarSenha.html" class="mdl-color-text--primary " style="float: center">Esqueci Minha Senha</a>
+                      <a href="recuperarSenha" class="mdl-color-text--primary " style="float: center">Esqueci Minha Senha</a>
                     </div>
 
                 </div>
