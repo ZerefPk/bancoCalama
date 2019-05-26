@@ -103,40 +103,37 @@ if (isset($_SESSION['msn'])) {
             <i class="material-icons" style="color: white;">arrow_back</i>
             </button>
             <div class="mdl-layout-spacer"></div>
-              <span class="mdl-layout-title" style="color: white;">Página de Login</span>
+              <span class="mdl-layout-title" style="color: white;">Empresa</span>
           </div>
         </header>
 
         <!--- aqui é feito o card do login--->
 
         <div class="mdl-card mdl-shadow--6dp" style="">
-                   <form action="../controller/LoginEmpresaController.php" method="post">
-					<div class="mdl-card__supporting-text">
-
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" id="cnpj" name="cnpj" inputmode="numeric" maxlength="18"/>
-                            <label class="mdl-textfield__label" for="cnpj">CNPJ</label>
-                        </div>
-
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="password" id="senha" name="senha"/>
-                            <label class="mdl-textfield__label" for="password">Senha</label>
-                        </div>
-                    </div>
-
-                        <div class="mdl-grid">
-                            <button class="mdl-cell mdl-cell--12-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit">
-                                ENTRAR
-                            </button>
-
-                        </div>
-							</form>
-                        <div class="mdl-grid" style="text-align: center">
-                            <div class="mdl-cell mdl-cell--12-col">
-                                <a href='recuperarSenhaEmpresa' class="mdl-color-text--primary " style="float: center">Esqueci Minha Senha</a>
-                            </div>
-                        </div>
-                    </div>
+          <form action="../controller/LoginEmpresaController.php" method="post">
+            <label class="mdl-textfield__label" style="text-align:center;color:green">Login</label></br></br>
+              <div class="mdl-card__supporting-text">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" id="cnpj" name="cnpj" inputmode="numeric" maxlength="18"/>
+                  <label class="mdl-textfield__label" for="cnpj">CNPJ</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="password" id="senha" name="senha"/>
+                  <label class="mdl-textfield__label" for="password">Senha</label>
+                </div>
+              </div>
+              <div class="mdl-grid">
+                <button class="mdl-cell mdl-cell--12-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit">
+                  ENTRAR
+                </button>
+              </div>
+            </form>
+            <div class="mdl-grid" style="text-align: center">
+              <div class="mdl-cell mdl-cell--12-col">
+                <a href='recuperarSenhaEmpresa' class="mdl-color-text--primary " style="float: center">Esqueci Minha Senha</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!--- exemplo do uso do grid
