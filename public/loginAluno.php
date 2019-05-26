@@ -89,7 +89,6 @@ session_start();
             </header>
 
             <!--- aqui é feito o card do login--->
-
             <div class="mdl-card mdl-shadow--6dp">
               <div class="mdl-card__supporting-text">
                <?php
@@ -122,7 +121,6 @@ session_start();
                     <div class="mdl-cell mdl-cell--12-col">
                       <a href="recuperarSenha" class="mdl-color-text--primary " style="float: center">Esqueci Minha Senha</a>
                     </div>
-
                 </div>
               </form>
             </div>

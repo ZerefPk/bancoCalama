@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-</head>
 <style>
 
 
@@ -225,20 +224,18 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
     }
   }
 </style>
+</head>
 <body>
  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
    <div class="mdl-layout__header-row">
      <!--back arrow-->
-
-
-
-     <i style="color: white;" class="material-icons">
-      supervised_user_circle
-    </i><a class="mdl-layout-title mdl-layout-title" style="color: white;" href="calamadesenvolvedores.php">Sobre</a>
+     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon " onclick="history.go(-1);">
+       <i class="material-icons" style="color: white;">arrow_back</i>
+     </button>
 
     <div class="mdl-layout-spacer"></div>
-    <span class="mdl-layout-title" style="color: white;">Para Estudantes</span>
+    <span class="mdl-layout-title" style="color: white;">Aluno</span>
   </div>
 </header>
 <br>
@@ -246,13 +243,13 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 <center>
   <a href="validarAluno">
     <div class="card" style=" margin-top: 1.8%;">
-      <button type="button"  class="vituriano btn btn-success botao">Cadastrar Aluno</button>
+      <button type="button"  class="vituriano btn btn-success botao">Cadastro <br/><font size="3">Registre-se no Banco de Currículos.</font></button>
     </div>
   </a>
 
   <a href="loginAluno">
     <div class="card" style=" margin-top: 1.8%;">
-      <button type="button" class="vituriano btn btn-success botao">Aluno Cadastrado</button>
+      <button type="button" class="vituriano btn btn-success botao">Login <br/><font size="3">Entre para buscar vagas.</font></button>
     </div>
   </a>
 
@@ -262,8 +259,8 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 
 <center>
   <div style="padding: 7%;">
-    <h6>Desenvolvido  por Felipe Raymison, Giovanna Nunes, Maria Luiza Botelho, Tony Padilha e 4º ano de Informática de 2018</h6>
-    <h6>SAC: curriculoscalamaifro@gmail.com</h6>
+    <h6><a href="calamadesenvolvedores">Sobre</a></h6>
+    <h6><a href="mailto:curriculoscalamaifro@gmail.com">curriculoscalamaifro@gmail.com</a></h6>
   </div>
 </center>
 
