@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR ">
 <head>
   <meta charset="utf-8">
@@ -108,28 +109,14 @@
     </header>
 
     <?php
-    include('connection.php');
-    include('paginacao.php');
+    include('../controller/ListarVagasController.php');
 
-  /*echo "<pre>";
-print_r($rows);
+/*echo "<pre>";
+print_r($dados);
 echo "</pre>";
 */
-?>
-
-<?php
-
- if (isset($_SESSION['cadastro']))
-{
- unset($_SESSION['cadastro']);
- echo "<script>alert('Candidatura realizada com sucesso.');</script>";
-
-}
- ?>
-
-<?php
-while ($dados = $query->fetch_assoc()) {
-
+while ($dados = $vaga[0]->fetch(PDO::FETCH_ASSOC)) {
+  // code...
   echo '
   <center>
   <br>
@@ -151,7 +138,11 @@ while ($dados = $query->fetch_assoc()) {
     <input class="mdl-textfield__input" type="text" name="area" value="' .$dados['area'] .'" readonly="readonly" required>
   </div>
    </div>
-
+  <!--Textfield Especialidade -->
+  <label><b>Especialidade:</b></label>
+  <div class="mdl-textfield mdl-js-textfield">
+  <input class="mdl-textfield__input" type="text" id="sample" name="especialidade" value="'.$dados['especialidade'].'"readonly="readonly" required>
+  </div>
   <!--Textfield Período -->
   <br>
   <label><b>Período:</b></label>
@@ -177,8 +168,7 @@ while ($dados = $query->fetch_assoc()) {
   <input class="mdl-textfield__input" type="text" id="sample" name="remuneracao" value="'.$dados['remuneracao'].'"readonly="readonly" required>
   </div>
    <div style="margin-bottom:5%;">
-
-   <a href="alunoCandidato?id=',$dados['ID_vaga'],'"><button class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" name= "candidato" value="candidato">Candidatar-se</button></a>
+   <a href="canditadarVaga.php"><button class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" name= "candidato" value="candidato">Candidatar-se</button></a>
   </div>
   </div>
   </form>
@@ -186,38 +176,43 @@ while ($dados = $query->fetch_assoc()) {
   <br>
   </center>
   ';
+
 }
+
 ?>
-
-    <nav aria-label="Navegação de página exemplo">
-      <ul class="pagination justify-content-center">
-        <li class="page-item disabled">
-
-        <?php if ($totalItensBanco > 5) {
+<center>
+<div class="mdl-card mdl-shadow--6dp">
+  <div class="esquerda">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <?php if ($totalItensBanco > 1) {
           echo '<li><a href="?pagina=1" aria-label="Previous"><span aria-hidden="true">«</span></a></li>';
     											for ($i= $pagina - $maxLinks; $i <= $pagina - 1; $i++) {
 
     												if ($i>=1) {
-    													echo '<li class="page-item"><a href="?pagina='.$i.'">'.$i.'</a></li>';
+    													echo '<li><a href="?pagina='.$i.'">'.$i.'</a></li>';
     												}
     											}
-    											echo '<li class="page-item"><span>'.$pagina.'</span></a></li>';
+    											echo '<li class="active"><span>'.$pagina.'</span></a></li>';
     											for ($i= $pagina +1; $i <= $pagina + $maxLinks; $i++) {
 
     												if ($i<=$totalPaginas) {
-    													echo '<li class="page-item"><a href="?pagina='.$i.'"</a>'.$i.'</li>';
+    													echo '<li><a href="?pagina='.$i.'"</a>'.$i.'</li>';
     												}
     											}
 
 
     			echo '<li><a href="?pagina='.$totalPaginas.'" aria-label="Next"><span aria-hidden="true">»</span></a></li>';
+
+
+
         } ?>
-      </li>
-
       </ul>
-
     </nav>
+  </div>
+</div>
 
+</center>
 </div>
 </body>
 </html>

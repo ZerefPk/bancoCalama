@@ -143,7 +143,7 @@ session_start();
 			<div class='' style='margin-bottom:20px'></div>
 			<!--sera ajeitado dps-->
 	</div>
-</div>", $aluno['foto'],$aluno['nome'],$aluno['sexo'],$aluno['data_de_nascimento'],$aluno['email'],$aluno['telefone'],$aluno['status_civil'],
+</div>", $aluno['foto'],$aluno['nome'],$aluno['sexo'],date('d/m/Y',strtotime($aluno['data_de_nascimento'])),$aluno['email'],$aluno['telefone'],$aluno['status_civil'],
 $aluno['bairro'],$aluno['escolaridade'],$aluno['curso'],$aluno['ano'],$aluno['idioma'],$aluno['experiencia_prof'],$aluno['extensao'],$aluno['objetivo_prof'],$aluno['disponibilidade']);
 		?>
 	</body>
