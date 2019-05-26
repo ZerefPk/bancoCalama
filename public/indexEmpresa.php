@@ -230,30 +230,27 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
   <header class="mdl-layout__header">
    <div class="mdl-layout__header-row">
      <!--back arrow-->
-
-
-
-     <i style="color: white;" class="material-icons">
-      supervised_user_circle
-    </i><a class="mdl-layout-title mdl-layout-title" style="color: white;" href="calamadesenvolvedores.php">Sobre</a>
+     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon " onclick="history.go(-1);">
+       <i class="material-icons" style="color: white;">arrow_back</i>
+     </button>
 
     <div class="mdl-layout-spacer"></div>
-    <span class="mdl-layout-title" style="color: white;">Para empresas</span>
+    <span class="mdl-layout-title" style="color: white;">Empresa</span>
   </div>
 </header>
 <br>
 
 <center>
-  <a href="cadastrarempresa.php">
+  <a href="cadastroEmpresa">
     <div class="card" style=" margin-top: 1.8%;">
-      <button type="button"  class="vituriano btn btn-success botao">Cadastrar Empresa</button>
+      <button type="button"  class="vituriano btn btn-success botao">Cadastro <br/><font size="3">Cadastre sua empresa e encontre profissionais.</font></button>
     </div>
   </a>
 
 
-  <a href="LoginEmpresaMiguel.php">
+  <a href="LoginEmpresa">
     <div class="card" style=" margin-top: 1.8%;">
-      <button type="button" class="vituriano btn btn-success botao">Empresa Cadastrada</button>
+      <button type="button" class="vituriano btn btn-success botao">Login <br/><font size="3">Entre para analisar currículos e ofertar vagas.</font></button>
     </div>
   </a>
 
@@ -264,8 +261,8 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 
 <center>
   <div style="padding: 7%;">
-    <h6>Desenvolvido  por Felipe Raymison, Giovanna Nunes, Maria Luiza Botelho, Tony Padilha e 4º ano de Informática de 2018</h6>
-    <h6>SAC: curriculoscalamaifro@gmail.com</h6>
+    <h6><a href="calamadesenvolvedores">Sobre</a></h6>
+    <h6><a href="mailto:curriculoscalamaifro@gmail.com">curriculoscalamaifro@gmail.com</a></h6>
   </div>
 </center>
 

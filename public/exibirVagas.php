@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 -->
 <!--arquivos online-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-light_green.min.css">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -131,7 +132,7 @@ if (isset($_SESSION['msn'])) {
     }
     else {
         // code...
-        echo "<script>alert('Você já envio curriculo para essa vaga!');</script>";
+        echo "<script>alert('Você já enviou curriculo para essa vaga!');</script>";
         unset($_SESSION['msn']);
     }
 
