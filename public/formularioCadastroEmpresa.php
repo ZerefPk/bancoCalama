@@ -122,7 +122,7 @@
     <br>
     <div class="">
         <div class="mdl-card mdl-shadow--6dp">
-         <form action="insereEmpresa.php" method="post">
+         <form action="../controller/CadastraEmpresaController.php" method="post">
             <div class="esquerda">
                 <!--Textfield Nome Fictício -->
                 <br>

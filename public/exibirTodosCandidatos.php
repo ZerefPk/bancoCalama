@@ -143,14 +143,14 @@ for ($x = 0; $x <= count($rows)-1; $x++) {
   <input class="mdl-textfield__input" type="text" id="sample" name="cargo" value="'.$rows[$x]['cargo'].'">
   <label class="mdl-textfield__label" for="sample">Cargo: '.$rows[$x]['cargo'].'</label>
   </div>
-   
+
 
   <div>
   <input type="hidden" name="idvaga" value="'.$rows[$x]['ID_vaga'].'">
   </div>
 
   <div style="margin-bottom:5%;">
-   <a href="exibirCurriculos.php"><button class=" mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" name= "candidatos">Candidatos</button></a>
+   <a href="exibirCurriculos"><button class=" mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" name= "candidatos">Candidatos</button></a>
   </div>
   </div>
   </form>

@@ -58,7 +58,23 @@ session_start();
 }
 
 </style>
+<?php
 
+if (isset($_SESSION['msn'])) {
+    // code...
+    if ($_SESSION['msn']) {
+        // code...
+        echo "<script>alert('Cadastrado com sucesso!');</script>";
+        unset($_SESSION['msn']);
+    }
+    else {
+        // code...
+        echo "<script>alert('Ocorreu um erro ao cadastra');</script>";
+        unset($_SESSION['msn']);
+    }
+
+}
+ ?>
 <script>
     function formatar(mascara, documento){
       var i = documento.value.length;
@@ -117,7 +133,7 @@ session_start();
 							</form>
                         <div class="mdl-grid" style="text-align: center">
                             <div class="mdl-cell mdl-cell--12-col">
-                                <a href='RecuperarSenhaEmpresa.html' class="mdl-color-text--primary " style="float: center">Esqueci Minha Senha</a>
+                                <a href='recuperarSenhaEmpresa' class="mdl-color-text--primary " style="float: center">Esqueci Minha Senha</a>
                             </div>
                         </div>
                     </div>

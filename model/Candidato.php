@@ -12,14 +12,15 @@ class Candidato
 
         $sql = "INSERT INTO candidato VALUES (default, :idAluno, :idVaga, default)";
         $valide = $this->verificarAluno($idAluno, $idVaga);
+        echo $valide;
 
-        if ($valide) {
+        if ($valide==0) {
             try {
                 $stmt = ConexaoFactory::getConexao()->prepare($sql);
 
                 $stmt->bindValue(':idAluno',$idAluno);
                 $stmt->bindValue(':idVaga', $idVaga);
-
+                var_dump($stmt);
                 $result = $stmt->execute();
                 return $result;
             } catch (\Exception $e) {

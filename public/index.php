@@ -235,25 +235,25 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 
      <i style="color: white;" class="material-icons">
       supervised_user_circle
-    </i><a class="mdl-layout-title mdl-layout-title" style="color: white;" href="calamadesenvolvedores.php">Sobre</a>
+    </i><a class="mdl-layout-title mdl-layout-title" style="color: white;" href="calamadesenvolvedores">Sobre</a>
 
     <div class="mdl-layout-spacer"></div>
-    <span class="mdl-layout-title" style="color: white;">Menu Principal</span>
+    <span class="mdl-layout-title" style="color: white;">Banco de Currículos</span>
   </div>
 </header>
 <br>
 
 <center>
-  <a href="indexAluno.php">
+  <a href="indexAluno">
     <div class="card" style=" margin-top: 1.8%;">
-      <button type="button"  class="vituriano btn btn-success botao">Para Estudantes</button>
+      <button type="button"  class="vituriano btn btn-success botao">Aluno</button>
     </div>
   </a>
 
 
-  <a href="empresas.php">
+  <a href="indexEmpresa">
     <div class="card" style=" margin-top: 1.8%;">
-      <button type="button" class="vituriano btn btn-success botao">Para Empresas</button>
+      <button type="button" class="vituriano btn btn-success botao">Empresa</button>
     </div>
   </a>
 
@@ -263,8 +263,8 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 
 <center>
   <div style="padding: 7%;">
-    <h6>Desenvolvido  por Felipe Raymison, Giovanna Nunes, Maria Luiza Botelho, Tony Padilha e 4º ano de Informática de 2018</h6>
-    <h6>SAC: curriculoscalamaifro@gmail.com</h6>
+    <h6><a href="calamadesenvolvedores">Sobre</a></h6>
+    <h6><a href="mailto:curriculoscalamaifro@gmail.com">curriculoscalamaifro@gmail.com</a></h6>
   </div>
 </center>
 </body>
