@@ -138,13 +138,13 @@
     <br>
     <div class="">
         <div class="mdl-card mdl-shadow--6dp">
-           <form action="IV_settingsTeste.php" method="post">
+           <form action="../controller/CadastraVagaController" method="post">
              <div class="esquerda">
                 <!--Textfield Cargo -->
                 <br>
                 <label><b>Cargo:</b></label>
                 <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" id="sample" name="cargo">
+                    <input class="mdl-textfield__input" type="text"  name="cargo">
                 </div>
                 <!-- GRANDE ÁREA DE ATUAÇÃO-->
                 <div>
@@ -192,19 +192,19 @@
                 <br>
                 <label><b>Número de vagas:</b></label>
                 <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" id="sample" name="vaga">
+                    <input class="mdl-textfield__input" type="text" name="vaga">
                 </div>
                 <!--Textfield Carga Horária -->
                 <br>
                 <label><b>Carga horária (semanal):</b></label>
                 <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" id="sample" name="cargahoraria">
+                    <input class="mdl-textfield__input" type="text" name="cargahoraria">
                 </div>
                 <!--Textfield Remuneração -->
                 <br>
                 <label><b>Remuneração:</b></label>
                 <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" id="sample" name="remuneracao">
+                    <input class="mdl-textfield__input" type="text" name="remuneracao">
                 </div>
                 <div>
                 <!--Textfield Descrição da vaga -->
@@ -212,7 +212,7 @@
                     <label><b>Descrição da vaga</b></label>
                     <br>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" name="descricao" style="border-width: 2px;border-style: solid;"></textarea>
+                        <textarea class="mdl-textfield__input" type="text" rows= "3" name="descricao" style="border-width: 2px;border-style: solid;"></textarea>
                         <label class="mdl-textfield__label" for="sample3">Descrição</label>
                     </div>
                 </div>
@@ -223,7 +223,7 @@
                     <label><b>Requisitos da vaga</b></label>
                     <br>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" name="requisitos" style="border-width: 2px;border-style: solid;"></textarea>
+                        <textarea class="mdl-textfield__input" type="text" rows= "3" name="requisitos" style="border-width: 2px;border-style: solid;"></textarea>
                         <label class="mdl-textfield__label" for="sample3">Requisitos</label>
                     </div>
                 </div>
@@ -231,7 +231,7 @@
                 <br>
                 <label><b>Email para contato:</b></label>
                 <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="email" id="sample" name="email">
+                    <input class="mdl-textfield__input" type="email"  name="email">
                 </div>
                 <br>
                 <!--Textfield Telefone -->
@@ -239,7 +239,7 @@
                 <label><b>Telefone:</b></label>
                 <br>
                     <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" id="Telefone" name="telefone" placeholder="Fixo ex.: (069) 9999-9999">
+                    <input class="mdl-textfield__input" type="text"  name="telefone" placeholder="Fixo ex.: (069) 9999-9999">
                     </div>
                     <br>
             <br>
