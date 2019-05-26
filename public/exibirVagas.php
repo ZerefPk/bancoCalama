@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 -->
 <!--arquivos online-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-light_green.min.css">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
 
 </head>
 <style>
@@ -94,6 +94,13 @@
     margin-top: 10%;
   }
 }
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
 </style>
 <body>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -115,6 +122,11 @@
 print_r($dados);
 echo "</pre>";
 */
+if (isset($_SESSION['msn'])) {
+    // code...
+    echo "<script>alert('Curriculo enviado com sucesso!');</script>";
+    unset($_SESSION['msn']);
+}
 while ($dados = $vaga[0]->fetch(PDO::FETCH_ASSOC)) {
   // code...
   echo '
@@ -168,7 +180,7 @@ while ($dados = $vaga[0]->fetch(PDO::FETCH_ASSOC)) {
   <input class="mdl-textfield__input" type="text" id="sample" name="remuneracao" value="'.$dados['remuneracao'].'"readonly="readonly" required>
   </div>
    <div style="margin-bottom:5%;">
-   <a href="canditadarVaga.php"><button class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" name= "candidato" value="candidato">Candidatar-se</button></a>
+   <a href="../controller/CandidatarVagaController?id='.$dados['ID_vaga'].'"><button class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" name= "candidato" value="candidato">Candidatar-se</button></a>
   </div>
   </div>
   </form>
@@ -183,7 +195,7 @@ while ($dados = $vaga[0]->fetch(PDO::FETCH_ASSOC)) {
 <center>
 <div class="mdl-card mdl-shadow--6dp">
   <div class="esquerda">
-    <nav aria-label="Page navigation example">
+    <nav >
       <ul class="pagination">
         <?php if ($totalItensBanco > 1) {
           echo '<li><a href="?pagina=1" aria-label="Previous"><span aria-hidden="true">«</span></a></li>';
