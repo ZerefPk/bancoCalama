@@ -250,7 +250,7 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
     </div>
   </a>
 
-  <a href="vagas">
+  <a href="cadastrarVaga">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button" class="vituriano btn btn-success botao">Nova Vaga</button>
     </div>
@@ -262,11 +262,7 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
     </div>
   </a>
 
-    <a href="exibirTodosAlunos">
-    <div class="card" style=" margin-top: 1.8%;">
-      <button type="button"  class="vituriano btn btn-success botao">Localizar todos os Currículos</button>
-    </div>
-  </a>
+
 
 <a href="exibirTodosCandidatos">
     <div class="card" style=" margin-top: 1.8%;">

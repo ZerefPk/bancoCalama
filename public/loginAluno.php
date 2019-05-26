@@ -84,7 +84,7 @@ session_start();
           <i class="material-icons" style="color: white;">arrow_back</i>
         </button>
         <div class="mdl-layout-spacer"></div>
-        <span class="mdl-layout-title" style="color: white;">Página de Login</span>
+        <span class="mdl-layout-title" style="color: white;">Aluno</span>
               </div>
             </header>
 

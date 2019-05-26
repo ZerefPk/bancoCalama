@@ -50,7 +50,7 @@ isset($senha) && isset($experiencia) && isset($projetos) && isset($objetivo) && 
             //redicinar se o cadastro foi efetudo com sucesso
             unset($_SESSION['dados']);
 
-            header('location: ../public/loginAluno.php');
+            header('location: ../public/loginAluno');
         }
 
     }
@@ -60,6 +60,6 @@ isset($senha) && isset($experiencia) && isset($projetos) && isset($objetivo) && 
 else {
     //redicar para cadastro
     echo "<script>alert('todos os campos são obrigatórios!');</script>";
-	echo "<script>location.href='../public/FormularioCadastroAluno.php';</script>";
+	echo "<script>location.href='../public/FormularioCadastroAluno';</script>";
 }
  ?>

@@ -27,11 +27,12 @@ class Vaga
             $stmt->bindValue(":requisitos", $requisitos);
             $stmt->bindValue(":email", $email);
             $stmt->bindValue(":tl", $telefone);
-
+            var_dump($stmt);
             $result = $stmt->execute();
 
             return $result;
         } catch (\Exception $e) {
+            
             throw new \Exception("Error Processing Request", $e);
 
         }

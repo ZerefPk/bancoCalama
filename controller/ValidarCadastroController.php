@@ -25,15 +25,15 @@ if ($validacao > 0 && isset($nome) && !empty($nome)) {
 	if ($alunoExistente == 0) {
         $_SESSION['dados'] = [$cpf, $nome];
         //redireciona para cadastro aluno
-        header('Location: ../public/FormularioCadastroAluno.php');
+        header('Location: ../public/formularioCadastroAluno');
 	}else {
 		echo "<script>alert('Oops... esse(a) aluno(a) já possui um perfil no sistema :(. Tente usando outro CPF, ou edite seu perfil já existente em Editar Perfil ;)');</script>";
-		echo "<script>location.href = '../public/validarAluno.php'</script>";
+		echo "<script>location.href = '../public/validarAluno'</script>";
 	}
 
 }else {
 	echo "<script>alert('Esse CPF não pertence a nenhum estudante do IFRO!');</script>";
-	echo "<script>location.href='../public/validarAluno.php';</script>";
+	echo "<script>location.href='../public/validarAluno';</script>";
 }
 
 
