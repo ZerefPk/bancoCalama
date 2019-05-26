@@ -62,4 +62,30 @@ class Empresa {
           return false;
         }
   }
+  public function loginEmpresa($cpf, $senha)
+  {
+      $sql = "SELECT Id 'idEmpresa' FROM empresa WHERE senha = :senha AND cnpj = :cnpj";
+
+      try {
+          $stmt = ConexaoFactory::getConexao()->prepare($sql);
+
+          $stmt->bindValue(':senha', md5($senha));
+          $stmt->bindValue(':cnpj',$cpf);
+          var_dump($stmt);
+          $stmt->execute();
+          if ($stmt->rowCount() > 0) {
+              $stmt = $stmt->fetch(PDO::FETCH_ASSOC);
+              $_SESSION['idEmpresa'] = $stmt['idEmpresa'];
+              return true;
+
+          }
+          else {
+              $_SESSION['LoginErro'] = "Usuário ou senha invalida";
+              return false;
+          }
+      } catch (Exception $e) {
+          return false;
+      }
+
+  }
 }

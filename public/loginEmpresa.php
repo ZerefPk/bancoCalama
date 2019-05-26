@@ -110,7 +110,7 @@ if (isset($_SESSION['msn'])) {
         <!--- aqui é feito o card do login--->
 
         <div class="mdl-card mdl-shadow--6dp" style="">
-                   <form action="validaempresa.php" method="post">
+                   <form action="../controller/LoginEmpresaController.php" method="post">
 					<div class="mdl-card__supporting-text">
 
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -119,7 +119,7 @@ if (isset($_SESSION['msn'])) {
                         </div>
 
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="password" id="password" name="senha"/>
+                            <input class="mdl-textfield__input" type="password" id="senha" name="senha"/>
                             <label class="mdl-textfield__label" for="password">Senha</label>
                         </div>
                     </div>
