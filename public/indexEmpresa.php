@@ -241,7 +241,7 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 <br>
 
 <center>
-  <a href="cadastroEmpresa">
+  <a href="formularioCadastroEmpresa">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button"  class="vituriano btn btn-success botao">Cadastro <br/><font size="3">Cadastre sua empresa e encontre profissionais.</font></button>
     </div>
