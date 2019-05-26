@@ -146,7 +146,7 @@ while ($dados = $query->fetch_assoc()) {
             <div class="card-block px-3">
               <h4 class="card-title" >'.$dados['nome'].'</h4>
               <p class="card-text" style="font-family:Lucida Sans Unicode;font-size:15px;">'.$dados['objetivo_prof'].' </p>
- <a href="exibirCurriculos.php?idAluno="'.$aluno_id_aluno.'"><button class=" mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" name= "candidatos">+Ver Mais</button></a>            </div>
+ <a href="exibirCurriculos?idAluno="'.$aluno_id_aluno.'"><button class=" mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" name= "candidatos">+Ver Mais</button></a>            </div>
           </div>
 
         </div>

@@ -244,14 +244,14 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 <br>
 
 <center>
-  <a href="cadastrarempresa.php">
+  <a href="cadastroEmpresa">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button"  class="vituriano btn btn-success botao">Cadastrar Empresa</button>
     </div>
   </a>
 
 
-  <a href="LoginEmpresaMiguel.php">
+  <a href="LoginEmpresa">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button" class="vituriano btn btn-success botao">Empresa Cadastrada</button>
     </div>

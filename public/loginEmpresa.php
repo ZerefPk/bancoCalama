@@ -117,7 +117,7 @@ session_start();
 							</form>
                         <div class="mdl-grid" style="text-align: center">
                             <div class="mdl-cell mdl-cell--12-col">
-                                <a href='RecuperarSenhaEmpresa.html' class="mdl-color-text--primary " style="float: center">Esqueci Minha Senha</a>
+                                <a href='recuperarSenhaEmpresa' class="mdl-color-text--primary " style="float: center">Esqueci Minha Senha</a>
                             </div>
                         </div>
                     </div>

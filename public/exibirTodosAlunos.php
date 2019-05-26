@@ -178,7 +178,7 @@ for ($x = 0; $x <= count($rows)-1; $x++) {
         	</div> </br> </br>
 
    <div style="margin-bottom:5%;">
-  <a href="exibirCurriculos.php?idAluno="'.$aluno_id_aluno.'"><button class=" mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" name= "candidatos">+Ver Mais</button></a>
+  <a href="exibirCurriculos?idAluno="'.$aluno_id_aluno.'"><button class=" mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" name= "candidatos">+Ver Mais</button></a>
   </div>
   </div>
 

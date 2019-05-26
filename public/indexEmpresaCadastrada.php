@@ -244,31 +244,31 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 <br>
 
 <center>
-   <a href="editempresa.php">
+   <a href="editarEmpresa">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button" class="vituriano btn btn-success botao">Editar Empresa</button>
     </div>
   </a>
 
-  <a href="vagasTeste.php">
+  <a href="vagas">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button" class="vituriano btn btn-success botao">Nova Vaga</button>
     </div>
   </a>
 
-  <a href="EditarVaga.php" >
+  <a href="editarVaga" >
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button"  class="vituriano btn btn-success botao">Editar Vaga</button>
     </div>
   </a>
 
-    <a href="ExibirTodosAlunos.php">
+    <a href="exibirTodosAlunos">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button"  class="vituriano btn btn-success botao">Localizar todos os Currículos</button>
     </div>
   </a>
 
-<a href="ExibirTodosCandidatos.php">
+<a href="exibirTodosCandidatos">
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button"  class="vituriano btn btn-success botao">Localizar candidatos às vagas</button>
     </div>
