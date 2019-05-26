@@ -13,7 +13,7 @@ final class ConexaoFactory{
                    .'dbname=banco_curriculo;'
                    .'charset=utf8'
                    , 'root',null);
-           
+
            return self::$conexao;
         } catch (PDOException $Exception) {
             throw new Exception( $Exception->getMessage( ) , $Exception->getCode( ) );
