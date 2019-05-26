@@ -135,13 +135,14 @@ $nome = $_SESSION['dados'][1];
                 <i class="material-icons" style="color: white;">arrow_back</i>
             </button><!--Botão de retorno-->
             <div class="mdl-layout-spacer"></div>
-            <span class="mdl-layout-title" style="color: white;">Cadastro de Dados</span>
+            <span class="mdl-layout-title" style="color: white;">Cadastro</span>
         </div>
     </header>
     <div class="mdl-layout__content">
         <main class="mdl-card mdl-shadow--6dp">
         <!--redireciona para cadastro aluno contoller-->
          <form action="../controller/CadastraAlunoController.php" method="post" enctype="multipart/form-data">
+           <label class="mdl-textfield__label" style="text-align:center;color:green">Insira seus dados</label></br></br>
             <div class="esquerda">
                 <!--Textfield Nome -->
                 <br>

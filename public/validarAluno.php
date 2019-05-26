@@ -82,7 +82,7 @@
           <i class="material-icons" style="color:white;">arrow_back</i>
         </button>
         <div class="mdl-layout-spacer"></div>
-        <span class="mdl-layout-title" style="color: white;">Página de Identificação</span>
+        <span class="mdl-layout-title" style="color: white;">Verificação</span>
         </div>
     </header>
 
@@ -91,7 +91,7 @@
             <div class="mdl-card mdl-shadow--6dp">
               <div class="mdl-card__supporting-text">
               <form action="../controller/ValidarCadastroController.php" method="POST">
-               <label class="mdl-textfield__label" style="text-align:center;color:green">Login</label></br></br>
+               <label class="mdl-textfield__label" style="text-align:center;color:green">Insira seus dados do IFRO</label></br></br>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                   <input type="text" class="mdl-textfield__input" name="nome">
                   <label class="mdl-textfield__label" for="login">Nome Completo</label>
@@ -103,7 +103,7 @@
 
                   <div class="mdl-grid">
                     <button class="mdl-cell mdl-cell--12-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white" type="submit" id="validar" name="validar">
-                      Entrar
+                      Cadastrar
                     </button>
                   </div>
 
