@@ -256,7 +256,7 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
     </div>
   </a>
 
-  <a href="curriculo.php" >
+  <a href="exibirCurriculo.php" >
     <div class="card" style=" margin-top: 1.8%;">
       <button type="button"  class="vituriano btn btn-success botao">Meu Currículo</button>
     </div>

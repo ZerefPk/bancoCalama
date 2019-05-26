@@ -22,7 +22,7 @@ $projetos = $_POST["projetos_de_extensao"];
 $objetivo = $_POST["objetivo_profissional"];
 $disponivel = $_POST["turno"];
 $stCivil = $_POST["estCivil"];// Pega a extensão
-$escolaridade = "Ensino Fundamental completo";
+$escolaridade = "Ensino Fundamental - Cursando";
 
 
 

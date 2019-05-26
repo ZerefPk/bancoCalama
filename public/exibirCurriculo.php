@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR ">
@@ -18,7 +17,7 @@ session_start();
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-light_green.min.css">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <style>
 
@@ -83,34 +82,7 @@ session_start();
 <body>
 	<?php
 
-	include ('conexao.php');
-	//$_SESSION['usuario'] = $id;
-	$id = $_SESSION['aluno'];
-	$select = mysqli_query($conn, "SELECT * FROM aluno WHERE idAluno = '$id'");
-
-
-	while ($aluno = mysqli_fetch_array($select)) {
-		$id = $aluno['idAluno'];
-		$nome = $aluno['nome'];
-		$sexo = $aluno['sexo'];
-		$data = date("d/m/Y", strtotime($aluno['data_de_nascimento']));
-		$cpf = $aluno['cpf'];
-		$tel = $aluno['telefone'];
-		$email = $aluno['email'];
-		$curso = $aluno['curso'];
-		$ano = $aluno['ano'];
-		$senha = $aluno['senha'];
-		$objetivo = $aluno['objetivo_prof'];
-		$experiencia = $aluno['experiencia_prof'];
-		$extensao = $aluno['extensao'];
-		$foto = $aluno['foto'];
-		$disponivel = $aluno['disponibilidade'];
-		$civil = $aluno['status_civil'];
-		$bairro = $aluno['bairro'];
-		$idioma = $aluno['idioma'];
-		$escolaridade = $aluno['escolaridade'];
-		$projetos =  $aluno['extensao'];
-	}
+	include_once '../controller/DadosAlunoController.php';
 
 
     printf("<div class='mdl-layout mdl-js-layout mdl-layout--fixed-header'>
@@ -128,12 +100,12 @@ session_start();
         <div class='mdl-card' style='padding-left: 2em;>
         	<!--- card da imagem--->
         	<div class='mdl-card left'>
-        		<td><img src='uploads/%s' style='width:10em; height:11em;'></td>
+        		<td><img src='img/aluno/%s' style='width:10em; height:11em;'></td>
         	</div>
         	<!--- card dos textos --->
         	<div class='mdl-card-testo left'>
 
-		        <form action='estudantes.php'>
+		        <form action='indexAlunoCadastrados.php'>
 		                        <h3>Currículo</h3>
 
 		                        <h5>Dados Pessoais</h5>
@@ -161,9 +133,9 @@ session_start();
 					<p><b>Disponibilidade:</b> %s</p>
 					</br>
 
-					 <a href = 'imprimirCurriculo.php' target='_blank'><button class='mdl-button mdl-js-button mdl-button--raised mdl-button--colored' type='button' style='color:white;' name='imprimir' value='imprimir'> <img src='https://image.flaticon.com/icons/png/512/61/61764.png' border='0' ; width='36' height='36'</button></a>
+					<button class='mdl-button mdl-js-button mdl-button--raised mdl-button--colored' type='button' style='color:white;' name='imprimir' value='imprimir'> <img src='https://image.flaticon.com/icons/png/512/61/61764.png' border='0' ; width='36' height='36'</button>
 
-<button class='mdl-button mdl-js-button mdl-button--raised mdl-button--colored' type='input' style='color:white; margin: 7px;'>Sair</button></center>
+<button class='mdl-button mdl-js-button mdl-button--raised mdl-button--colored' type='input' style='color:white;'>Sair</button></center>
 
 		        </form>
             </div>
@@ -171,8 +143,8 @@ session_start();
 			<div class='' style='margin-bottom:20px'></div>
 			<!--sera ajeitado dps-->
 	</div>
-</div>", $foto, $nome, $sexo, $data, $email, $tel, $civil, $bairro, $escolaridade,$curso, $ano, $idioma,$experiencia,$projetos, $objetivo, $disponivel);
+</div>", $aluno['foto'],$aluno['nome'],$aluno['sexo'],$aluno['data_de_nascimento'],$aluno['email'],$aluno['telefone'],$aluno['status_civil'],
+$aluno['bairro'],$aluno['escolaridade'],$aluno['curso'],$aluno['ano'],$aluno['idioma'],$aluno['experiencia_prof'],$aluno['extensao'],$aluno['objetivo_prof'],$aluno['disponibilidade']);
 		?>
-
 	</body>
 	</html>
