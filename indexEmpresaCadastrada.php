@@ -1,3 +1,6 @@
+<?php session_start();
+
+ ?>
 <!DOCTYPE html>
 <html lang="pt-BR ">
 <head>
@@ -224,13 +227,33 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
       width: 38rem;
     }
   }
+
 </style>
+<?php
+
+if (isset($_SESSION['msn'])) {
+    // code...
+
+    if ($_SESSION['msn']) {
+        // code...
+        echo "<script>alert('Vaga Cadastrada!');</script>";
+        unset($_SESSION['msn']);
+    }
+    else {
+        // code...
+        echo "<script>alert('Erro ao cadastra, verifique todos os campos!');</script>";
+        unset($_SESSION['msn']);
+    }
+
+}
+
+ ?>
 <body>
  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
    <div class="mdl-layout__header-row">
      <!--back arrow-->
-     
+
      <a class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon' href='/'>
        <i class='material-icons' style='color: white;'>home</i>
      </a>

@@ -25,21 +25,7 @@ if(isset($_POST['cargo']) && isset($_POST['requisitos']) &&
     $vaga = $vaga->cadastraVaga($cargo, $qtd, $cargaH, $requisitos, $periodo, $remuneracao, $area, $idEmp,
     $desc, $requisitos, $email, $telefone);
 
-    if ($vaga ){
-        // code...
-        $_SESSION['msn']=true;
-        header('location: ../public/indexEmpresaCadastrada.php');
-
-    }
-    else {
-        $_SESSION['msn']=false;
-        echo $vaga;
-        echo $cargo, $qtd, $cargaH, $requisitos, $periodo, $remuneracao, $area, $idEmp,
-        $desc, $requisitos, $email, $telefone;
-        //header('location: ../public/indexEmpresaCadastrada.php');
-
-    }
-
+    var_dump($vaga);
 
 }
 else {

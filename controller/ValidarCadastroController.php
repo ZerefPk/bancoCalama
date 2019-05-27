@@ -1,7 +1,7 @@
 <?php
 //inclui arquivos
-include_once '../model/CpfAluno.php';
-include_once '../model/Aluno.php';
+include_once 'model/CpfAluno.php';
+include_once 'model/Aluno.php';
 session_start();
 //recebe dado do formulário
 $cpf = $_POST['cpf'];
@@ -25,15 +25,15 @@ if ($validacao > 0 && isset($nome) && !empty($nome)) {
 	if ($alunoExistente == 0) {
         $_SESSION['dados'] = [$cpf, $nome];
         //redireciona para cadastro aluno
-        header('Location: ../public/formularioCadastroAluno');
+        header('Location: public/formularioCadastroAluno');
 	}else {
 		echo "<script>alert('Oops... esse(a) aluno(a) já possui um perfil no sistema :(. Tente usando outro CPF, ou edite seu perfil já existente em Editar Perfil ;)');</script>";
-		echo "<script>location.href = '../public/validarAluno'</script>";
+		echo "<script>location.href = 'public/validarAluno'</script>";
 	}
 
 }else {
 	echo "<script>alert('Esse CPF não pertence a nenhum estudante do IFRO!');</script>";
-	echo "<script>location.href='../public/validarAluno';</script>";
+	echo "<script>location.href='public/validarAluno';</script>";
 }
 
 

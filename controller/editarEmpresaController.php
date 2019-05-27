@@ -1,5 +1,5 @@
 <?php
-require_once '../model/Empresa.php';
+require_once 'model/Empresa.php';
 
 
 

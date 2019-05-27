@@ -141,7 +141,7 @@
     <br>
     <div class="">
         <div class="mdl-card mdl-shadow--6dp">
-           <form action="../controller/CadastraVagaController" method="post">
+           <form action="controller/CadastraVagaController" method="post">
              <div class="esquerda">
                 <!--Textfield Cargo -->
                 <br>

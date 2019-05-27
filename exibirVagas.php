@@ -128,6 +128,7 @@ echo "</pre>";
 */
 if (isset($_SESSION['msn'])) {
     // code...
+
     if ($_SESSION['msn']) {
         // code...
         echo "<script>alert('Curriculo enviado com sucesso!');</script>";

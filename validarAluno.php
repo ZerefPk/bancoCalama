@@ -93,7 +93,7 @@
 
             <div class="mdl-card mdl-shadow--6dp">
               <div class="mdl-card__supporting-text">
-              <form action="../controller/ValidarCadastroController.php" method="POST">
+              <form action="controller/ValidarCadastroController.php" method="POST">
                <label class="mdl-textfield__label" style="text-align:center;color:green">Insira seus dados do IFRO</label></br></br>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                   <input type="text" class="mdl-textfield__input" name="nome">

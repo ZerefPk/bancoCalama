@@ -1,5 +1,5 @@
 <?php
-include_once '../model/Vaga.php';
+include_once 'model/Vaga.php';
 
 $vaga = new Vaga();
 $totalItens = 1;

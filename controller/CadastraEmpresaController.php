@@ -2,7 +2,7 @@
 //incluir a Model
 // include once inclui apenas uma vez
 session_start();
-require_once '../model/Empresa.php';
+require_once 'model/Empresa.php';
 
 $nomeFicticio = $_POST["NomeFicticio"];
 $cnpj = $_POST["cnpj"];
@@ -30,7 +30,7 @@ if(isset($nomeFicticio)&& isset($cnpj)&& isset($endereco)&& isset($razao)&& isse
     if ($empresa) {
         //redicinar se o cadastro foi efetudo com sucesso
         $_SESSION['msn']=true;
-        header('location: ../public/loginEmpresa.php');
+        header('location: public/loginEmpresa.php');
     }
 }
 else {

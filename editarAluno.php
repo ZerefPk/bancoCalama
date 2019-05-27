@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '../controller/DadosAlunoController.php';
+include_once 'controller/DadosAlunoController.php';
 ?>
 <!DOCTYPE html>
 <head>

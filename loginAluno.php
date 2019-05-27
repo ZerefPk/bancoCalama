@@ -101,7 +101,7 @@ session_start();
               endif;
               unset($_SESSION['nao_autenticado']);
               ?>
-              <form action="../controller/LoginAlunoController.php" method="POST">
+              <form action="controller/LoginAlunoController.php" method="POST">
                <label class="mdl-textfield__label" style="text-align:center;color:green">Login</label></br></br>
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

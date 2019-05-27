@@ -82,7 +82,7 @@ session_start();
 <body>
 	<?php
 
-	include_once '../controller/DadosAlunoController.php';
+	include_once 'controller/DadosAlunoController.php';
 
 
     printf("<div class='mdl-layout mdl-js-layout mdl-layout--fixed-header'>
