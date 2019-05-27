@@ -108,6 +108,9 @@
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!--back arrow-->
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/">
+          <i class="material-icons" style="color: white;">home</i>
+        </a>
         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon " onclick="history.go(-1);">
           <i class="material-icons" style="color: white;">arrow_back</i>
         </button>

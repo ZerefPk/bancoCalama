@@ -262,6 +262,9 @@ body.is-loading #banner:before {
         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon " onclick="history.go(-1);">
           <i class="material-icons" style="color:white;">arrow_back</i>
         </button>
+        <a class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon' href='/'>
+          <i class='material-icons' style='color: white;'>home</i>
+        </a>
         <div class="mdl-layout-spacer"></div>
         <span class="mdl-layout-title" style="color: white;">Desenvolvedores</span>
       </div>
@@ -319,7 +322,7 @@ body.is-loading #banner:before {
         </div>
         <div class="card-body">
           <h5 class="card-title">Giovanna Nunes Silva</h5>
-          <a href="https://www.facebook.com/giovanna.nunes.5682" target="_blank" class="btn btn-primary"><i class="fab fa-facebook"></i> giovanna.nunes</a> 
+          <a href="https://www.facebook.com/giovanna.nunes.5682" target="_blank" class="btn btn-primary"><i class="fab fa-facebook"></i> giovanna.nunes</a>
         </div>
       </div>
        <div class="card"  style="width: 18rem; margin-top: 5%;">
@@ -340,11 +343,10 @@ body.is-loading #banner:before {
           <a href="https://www.facebook.com/tony.padilha.7" target="_blank" class="btn btn-primary"><i class="fab fa-facebook"></i> tonyandrew.padilha</a>
         </div>
       </div>
-     
+
 
     </center>
   </div>
 </div>
 </body>
 </html>
-

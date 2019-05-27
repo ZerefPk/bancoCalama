@@ -102,6 +102,9 @@ if (isset($_SESSION['msn'])) {
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon " onclick="history.go(-1);">
             <i class="material-icons" style="color: white;">arrow_back</i>
             </button>
+            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/">
+              <i class="material-icons" style="color: white;">home</i>
+            </a>
             <div class="mdl-layout-spacer"></div>
               <span class="mdl-layout-title" style="color: white;">Empresa</span>
           </div>

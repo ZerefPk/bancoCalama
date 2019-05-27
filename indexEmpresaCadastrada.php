@@ -230,13 +230,10 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
   <header class="mdl-layout__header">
    <div class="mdl-layout__header-row">
      <!--back arrow-->
-
-
-
-     <i style="color: white;" class="material-icons">
-      supervised_user_circle
-    </i><a class="mdl-layout-title mdl-layout-title" style="color: white;" href="calamadesenvolvedores.php">Sobre</a>
-
+     
+     <a class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon' href='/'>
+       <i class='material-icons' style='color: white;'>home</i>
+     </a>
     <div class="mdl-layout-spacer"></div>
     <span class="mdl-layout-title" style="color: white;">Para empresas</span>
   </div>
