@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="shortcut icon" type="imagem/x-icon" href="img/icone.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>e-Curriculum || Porto Velho Calama</title>
+  <title>EM MANUTENÇÃO ─ e-Curriculum Campus Calama</title>
   <!--arquivos online-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-light_green.min.css">
@@ -227,45 +227,18 @@ nav.mdl-navigation .mdl-badge[data-badge]:after{
 </style>
 <body>
  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-   <div class="mdl-layout__header-row">
-     <!--back arrow-->
-
-
-
-     <i style="color: white;" class="material-icons">
-      supervised_user_circle
-    </i><a class="mdl-layout-title mdl-layout-title" style="color: white;" href="calamadesenvolvedores">Sobre</a>
-
-    <div class="mdl-layout-spacer"></div>
-    <span class="mdl-layout-title" style="color: white;">Banco de Currículos</span>
-  </div>
+ <header class="mdl-layout__header">
+  <div class="mdl-layout__header-row">
+   <div class="mdl-layout-spacer"></div>
+   <span class="mdl-layout-title" style="color: white;">e-Curriculum</span>
+ </div>
 </header>
-<br>
-
-<center>
-  <a href="indexAluno">
-    <div class="card" style=" margin-top: 1.8%;">
-      <button type="button"  class="vituriano btn btn-success botao">Aluno</button>
-    </div>
-  </a>
-
-
-  <a href="indexEmpresa">
-    <div class="card" style=" margin-top: 1.8%;">
-      <button type="button" class="vituriano btn btn-success botao">Empresa</button>
-    </div>
-  </a>
-
-</center>
-
-<br><br><br><br>
-
-<center>
-  <div style="padding: 7%;">
-    <h6><a href="calamadesenvolvedores">Sobre</a></h6>
-    <h6><a href="mailto:curriculoscalamaifro@gmail.com">curriculoscalamaifro@gmail.com</a></h6>
   </div>
-</center>
+<br>
+  <center>
+    <div class="card" style=" margin-top: 10%;">
+      <button type="button"  class="vituriano btn btn-success botao">EM MANUTENÇÃO!</button>
+    </div>
+    </center>
 </body>
 </html>
