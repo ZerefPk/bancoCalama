@@ -12,7 +12,6 @@ if (isset($vaga) && !empty($vaga)) {
         // code...
         $_SESSION['msn']=true;
         header('location: ../public/exibirVagas.php');
-
     }
     else {
         $_SESSION['msn']=false;

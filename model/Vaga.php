@@ -32,7 +32,7 @@ class Vaga
 
             return $result;
         } catch (\Exception $e) {
-            
+
             throw new \Exception("Error Processing Request", $e);
 
         }
@@ -153,7 +153,7 @@ class Vaga
             $stmt->execute();
             return $stmt->rowCount()>0;
         } catch(\Exception $e) {
-            throw new Exception("erro ao deletear", $e);
+            throw new Exception("erro ao deletar", $e);
             return;
         }
 

@@ -11,4 +11,3 @@ $totalPaginas=ceil($vaga[1]/1);
 $totalItensBanco = $vaga[1];
 
  ?>
- ?>

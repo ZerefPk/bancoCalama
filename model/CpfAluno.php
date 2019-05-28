@@ -12,10 +12,10 @@ class CpfAluno {
     final static function validaCpf($cpf){
 
         try {
-            $sql        =  "SELECT COUNT(idCPF) 'existe' FROM cpf_alunos WHERE cpf = :cpf";
+            $sql = "SELECT COUNT(idCPF) 'existe' FROM cpf_alunos WHERE cpf = :cpf";
 
             $stmt    = ConexaoFactory::getConexao()->prepare($sql);
-            
+
             $stmt->bindValue(':cpf',$cpf);
             $stmt->execute();
 
